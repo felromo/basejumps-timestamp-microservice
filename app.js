@@ -28,12 +28,12 @@ router.get('/:date?', function (req, res) {
         if (/^\d*$/.test(date)) {
             res.json({
                 unix: +date,
-                neutral: moment.unix(+date).format("MMMM DD, YYYY")
+                neutral: moment.unix(+date).format('MMMM DD, YYYY')
             });
         }
         else {
             res.json({
-                unix: (+new Date(date)/10000),
+                unix: +moment(date, 'MMMM DD, YYYY').format('X'),
                 neutral: date
             });
         }
