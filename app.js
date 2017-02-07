@@ -43,5 +43,3 @@ app.use('/', router);
 app.listen(port);
 
 console.log('Backend running on port ' + port);
-console.log(moment.unix(1450137600));
-console.log(moment("December 15, 2015", "MMMM-DD-YYYY"));
